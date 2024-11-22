@@ -22,14 +22,14 @@
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
     img {
       max-width: 100%;
       height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     /* Header */
@@ -74,7 +74,8 @@
     /* Hero Section */
     .hero {
       height: 90vh;
-      background: url('https://source.unsplash.com/1600x900/?luxury-homes') no-repeat center center/cover;
+      background: url('img.jpg') no-repeat center center;
+      background-size: contain;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -101,6 +102,7 @@
       z-index: 2;
       margin-bottom: 1rem;
       color: #ffdd59;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     .hero p {
@@ -205,48 +207,40 @@
       background: #6A0572;
     }
 
+    /* Testimonials Section */
+    .testimonials {
+      padding: 4rem 2rem;
+      background: #f7f9fc;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color: #6A0572;
+    }
+
+    .testimonial {
+      margin-bottom: 2rem;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      color: #555;
+    }
+
+    .testimonial span {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
     /* Contact Section */
     .contact {
       padding: 4rem 2rem;
       background: linear-gradient(90deg, #FF6F61, #6A0572);
       color: white;
-    }
-
-    .contact h2 {
-      font-size: 3rem;
-      margin-bottom: 2rem;
-    }
-
-    .contact form {
-      max-width: 600px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .contact input, .contact textarea, .contact button {
-      padding: 1rem;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-      font-size: 1rem;
-    }
-
-    .contact input, .contact textarea {
-      background: rgba(255, 255, 255, 0.9);
-      color: #333;
-    }
-
-    .contact button {
-      background: #ffdd59;
-      color: #333;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .contact button:hover {
-      background: #ffc107;
     }
 
     /* Footer */
@@ -256,23 +250,21 @@
       text-align: center;
       padding: 1.5rem;
     }
-
-    footer p {
-      margin: 0;
-    }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Solucciones Hogar</div>
+    <div class="logo">Soluciones Hogar</div>
     <nav>
       <ul>
         <li><a href="#home">Inicio</a></li>
         <li><a href="#properties">Propiedades</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
-  </header> 
+  </header>
+
   <section id="home" class="hero">
     <h1>Descubre Tu Hogar Ideal</h1>
     <p>Venta y alquiler de propiedades en las mejores ubicaciones.</p>
@@ -305,14 +297,20 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contáctanos</h2>
-    <form>
-      <input type="text" placeholder="Nombre Completo" required>
-      <input type="email" placeholder="Correo Electrónico" required>
-      <textarea placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+  <section id="testimonials" class="testimonials">
+    <h2>Testimonios de Clientes</h2>
+    <div class="testimonial">
+      <p>"Gracias a Soluciones Hogar encontré la casa de mis sueños. Excelente atención y profesionalismo."</p>
+      <span>- Juan Pérez</span>
+    </div>
+    <div class="testimonial">
+      <p>"Recomiendo totalmente sus servicios. Me ayudaron a alquilar mi apartamento de manera rápida y segura."</p>
+      <span>- María Gómez</span>
+    </div>
+    <div class="testimonial">
+      <p>"Un equipo confiable y honesto. Mi experiencia con ellos fue inmejorable."</p>
+      <span>- Andrés López</span>
+    </div>
   </section>
 
   <footer>
