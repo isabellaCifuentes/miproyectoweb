@@ -241,6 +241,43 @@
       padding: 4rem 2rem;
       background: linear-gradient(90deg, #FF6F61, #6A0572);
       color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact input, .contact textarea, .contact button {
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+
+    .contact textarea {
+      resize: none;
+    }
+
+    .contact button {
+      background: #ffdd59;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background: #ffc107;
     }
 
     /* Footer */
@@ -249,6 +286,10 @@
       color: white;
       text-align: center;
       padding: 1.5rem;
+    }
+
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
@@ -311,6 +352,16 @@
       <p>"Un equipo confiable y honesto. Mi experiencia con ellos fue inmejorable."</p>
       <span>- Andrés López</span>
     </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Nombre Completo" required>
+      <input type="email" placeholder="Correo Electrónico" required>
+      <textarea placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <footer>
